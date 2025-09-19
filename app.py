@@ -100,13 +100,13 @@ st.markdown("""
 # Initialize session state for thresholds
 if 'kpi_thresholds' not in st.session_state:
     st.session_state.kpi_thresholds = {
-        'Revenue': {'target': 1000000, 'warning_low': 900000, 'critical_low': 800000},
-        'Profit_Margin': {'target': 25, 'warning_low': 20, 'critical_low': 15},
-        'Customer_Acquisition_Cost': {'target': 100, 'warning_high': 150, 'critical_high': 200},
-        'Customer_Lifetime_Value': {'target': 2000, 'warning_low': 1600, 'critical_low': 1200},
-        'Cash_Flow': {'target': 500000, 'warning_low': 300000, 'critical_low': 100000},
-        'ROI': {'target': 20, 'warning_low': 15, 'critical_low': 10},
-        'Market_Share': {'target': 15, 'warning_low': 12, 'critical_low': 10},
+        'Revenue': {'target': 1000000.0, 'warning_low': 900000.0, 'critical_low': 800000.0},
+        'Profit_Margin': {'target': 25.0, 'warning_low': 20.0, 'critical_low': 15.0},
+        'Customer_Acquisition_Cost': {'target': 100.0, 'warning_high': 150.0, 'critical_high': 200.0},
+        'Customer_Lifetime_Value': {'target': 2000.0, 'warning_low': 1600.0, 'critical_low': 1200.0},
+        'Cash_Flow': {'target': 500000.0, 'warning_low': 300000.0, 'critical_low': 100000.0},
+        'ROI': {'target': 20.0, 'warning_low': 15.0, 'critical_low': 10.0},
+        'Market_Share': {'target': 15.0, 'warning_low': 12.0, 'critical_low': 10.0},
         'Customer_Satisfaction': {'target': 4.5, 'warning_low': 4.0, 'critical_low': 3.5}
     }
 
@@ -464,34 +464,34 @@ with tab2:
         st.subheader("Financial Metrics")
         
         st.markdown("**Revenue Thresholds**")
-        rev_target = st.number_input("Target", value=st.session_state.kpi_thresholds['Revenue']['target'], step=10000, key="rev_target")
-        rev_warning = st.number_input("Warning Low", value=st.session_state.kpi_thresholds['Revenue']['warning_low'], step=10000, key="rev_warning")
-        rev_critical = st.number_input("Critical Low", value=st.session_state.kpi_thresholds['Revenue']['critical_low'], step=10000, key="rev_critical")
+        rev_target = st.number_input("Target", value=float(st.session_state.kpi_thresholds['Revenue']['target']), step=10000.0, key="rev_target")
+        rev_warning = st.number_input("Warning Low", value=float(st.session_state.kpi_thresholds['Revenue']['warning_low']), step=10000.0, key="rev_warning")
+        rev_critical = st.number_input("Critical Low", value=float(st.session_state.kpi_thresholds['Revenue']['critical_low']), step=10000.0, key="rev_critical")
         
         st.markdown("**Profit Margin Thresholds (%)**")
-        pm_target = st.number_input("Target", value=st.session_state.kpi_thresholds['Profit_Margin']['target'], step=1.0, key="pm_target")
-        pm_warning = st.number_input("Warning Low", value=st.session_state.kpi_thresholds['Profit_Margin']['warning_low'], step=1.0, key="pm_warning")
-        pm_critical = st.number_input("Critical Low", value=st.session_state.kpi_thresholds['Profit_Margin']['critical_low'], step=1.0, key="pm_critical")
+        pm_target = st.number_input("Target", value=float(st.session_state.kpi_thresholds['Profit_Margin']['target']), step=1.0, key="pm_target")
+        pm_warning = st.number_input("Warning Low", value=float(st.session_state.kpi_thresholds['Profit_Margin']['warning_low']), step=1.0, key="pm_warning")
+        pm_critical = st.number_input("Critical Low", value=float(st.session_state.kpi_thresholds['Profit_Margin']['critical_low']), step=1.0, key="pm_critical")
     
     with col2:
         st.subheader("Customer Metrics")
         
         st.markdown("**Customer Acquisition Cost**")
-        cac_target = st.number_input("Target", value=st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['target'], step=10, key="cac_target")
-        cac_warning = st.number_input("Warning High", value=st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['warning_high'], step=10, key="cac_warning")
-        cac_critical = st.number_input("Critical High", value=st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['critical_high'], step=10, key="cac_critical")
+        cac_target = st.number_input("Target", value=float(st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['target']), step=10.0, key="cac_target")
+        cac_warning = st.number_input("Warning High", value=float(st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['warning_high']), step=10.0, key="cac_warning")
+        cac_critical = st.number_input("Critical High", value=float(st.session_state.kpi_thresholds['Customer_Acquisition_Cost']['critical_high']), step=10.0, key="cac_critical")
         
         st.markdown("**Customer Satisfaction**")
-        cs_target = st.number_input("Target", value=st.session_state.kpi_thresholds['Customer_Satisfaction']['target'], step=0.1, key="cs_target")
-        cs_warning = st.number_input("Warning Low", value=st.session_state.kpi_thresholds['Customer_Satisfaction']['warning_low'], step=0.1, key="cs_warning")
-        cs_critical = st.number_input("Critical Low", value=st.session_state.kpi_thresholds['Customer_Satisfaction']['critical_low'], step=0.1, key="cs_critical")
+        cs_target = st.number_input("Target", value=float(st.session_state.kpi_thresholds['Customer_Satisfaction']['target']), step=0.1, key="cs_target")
+        cs_warning = st.number_input("Warning Low", value=float(st.session_state.kpi_thresholds['Customer_Satisfaction']['warning_low']), step=0.1, key="cs_warning")
+        cs_critical = st.number_input("Critical Low", value=float(st.session_state.kpi_thresholds['Customer_Satisfaction']['critical_low']), step=0.1, key="cs_critical")
     
     if st.button("Update Thresholds", type="primary"):
         st.session_state.kpi_thresholds.update({
-            'Revenue': {'target': rev_target, 'warning_low': rev_warning, 'critical_low': rev_critical},
-            'Profit_Margin': {'target': pm_target, 'warning_low': pm_warning, 'critical_low': pm_critical},
-            'Customer_Acquisition_Cost': {'target': cac_target, 'warning_high': cac_warning, 'critical_high': cac_critical},
-            'Customer_Satisfaction': {'target': cs_target, 'warning_low': cs_warning, 'critical_low': cs_critical}
+            'Revenue': {'target': float(rev_target), 'warning_low': float(rev_warning), 'critical_low': float(rev_critical)},
+            'Profit_Margin': {'target': float(pm_target), 'warning_low': float(pm_warning), 'critical_low': float(pm_critical)},
+            'Customer_Acquisition_Cost': {'target': float(cac_target), 'warning_high': float(cac_warning), 'critical_high': float(cac_critical)},
+            'Customer_Satisfaction': {'target': float(cs_target), 'warning_low': float(cs_warning), 'critical_low': float(cs_critical)}
         })
         st.success("Thresholds updated successfully!")
         st.rerun()
