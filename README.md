@@ -3,7 +3,7 @@
 A comprehensive real-time business intelligence dashboard for monitoring key performance indicators with automated alerting, threshold management, and executive reporting capabilities. Built with Python and Streamlit to deliver actionable insights for strategic decision-making.
 
 ## Live Application
-**Demo URL:** [View Live Dashboard](https://your-kpi-dashboard.streamlit.app)
+**Demo URL:** [View Live Dashboard](https://lariskpimonitoringsystem.streamlit.app/)
 
 ## Executive Summary
 
@@ -263,12 +263,13 @@ The application is optimized for deployment on:
 **Developer:** Larismar Tati  
 **Portfolio:** Virtual Code Analytics  
 **Professional Profile:** [LinkedIn](https://linkedin.com/in/larismar-bacana-32b227251)  
-**Source Code:** [GitHub Repository](https://github.com/LJAT14)  
+**Source Code:** [GitHub Repository](https://github.com/LJAT14/KPI-Monitoring-System)
 
 ## License and Usage Terms
 
 This project is available under the MIT License for educational and professional portfolio purposes. Commercial usage and enterprise deployment require explicit permission and licensing agreements.
 
 ---
+
 
 **Professional Note:** This KPI monitoring system represents a comprehensive demonstration of business intelligence engineering, dashboard development, and enterprise analytics capabilities suitable for senior-level business intelligence and data analytics roles in performance-driven organizations.
